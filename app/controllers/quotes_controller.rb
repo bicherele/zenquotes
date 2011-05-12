@@ -80,4 +80,16 @@ class QuotesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  # GET /quotes/random
+  # GET /quotes/random.xml
+  def random
+    @quote = Quote.find(:first, :order => 'random()')
+    
+    respond_to do |format|
+      format.html # random.html.erb
+      format.xml  { render :xml => @quote }
+    end
+  end
+    
 end
