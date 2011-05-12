@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Zenquotes</title>
-  <%= stylesheet_link_tag :all %>
+  <title>Zen Quotes: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'quotes' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 
-<%= yield %>
+<div id="header">
+  <a href="/"><h1>Zen Quotes</h1></a>
+</div>
+
+<div id="content">
+
+  <%= yield  %>
+
+</div>
 
 </body>
 </html>
