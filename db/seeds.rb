@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+Quote.create(:name => 'Ovid', :city => 'Add a little to a little and there will be a great heap.')
+Quote.create(:name => 'Horace', :city => 'He who has begun has the work half done.')
