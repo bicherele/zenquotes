@@ -86,7 +86,7 @@ class QuotesController < ApplicationController
   def random
     # @quote = Quote.find(:first, :order => 'random()')
     # @quote = Quote.order("RANDOM()").first
-    @quote = Quote.all.random
+    @quote = Quote.first(:order => "RANDOM()")
     
     respond_to do |format|
       format.html # random.html.erb
