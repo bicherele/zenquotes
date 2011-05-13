@@ -85,7 +85,8 @@ class QuotesController < ApplicationController
   # GET /quotes/random.xml
   def random
     # @quote = Quote.find(:first, :order => 'random()')
-    @quote = Quote.order("RANDOM()").first
+    # @quote = Quote.order("RANDOM()").first
+    @quote = Quote.all.random
     
     respond_to do |format|
       format.html # random.html.erb

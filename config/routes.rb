@@ -1,6 +1,7 @@
 Zenquotes::Application.routes.draw do
+  match 'quotes/random' => 'quotes#random'
   resources :quotes
-  root :to => "quotes#index"
+  root :to => "quotes#random"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
