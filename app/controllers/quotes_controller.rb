@@ -89,8 +89,8 @@ class QuotesController < ApplicationController
     @quote = Quote.first(:order => "RANDOM()")
     
     respond_to do |format|
-      format.html # random.html.erb
-      format.xml  { render :xml => @quote }
+      format.html { render :layout => "random" } # random.html.erb
+      format.xml  { render :xml => @quote, :layout => "random" }
     end
   end
     

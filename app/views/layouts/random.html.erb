@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zen Quotes</title>
+  <%= stylesheet_link_tag 'zen' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="header">
+  <a href="/"><h1>Zen Quotes</h1></a>
+</div>
+
+<div id="content">
+
+  <%= yield  %>
+
+</div>
+
+</body>
+</html>
